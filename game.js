@@ -10,8 +10,6 @@ var WIDTH;
 var HEIGHT;
 var intervalId = 0;
 
-
-
 /*Variables for the ball*/
 var ballr = 10; //radius
 var x = 250;
@@ -128,7 +126,7 @@ function initbricks() {
     }
 }
 
-//draw the bricks 
+//draw the bricks
 function drawbricks() {
     "use strict";
     var i, j;
@@ -300,19 +298,13 @@ function draw() {
 function allofthem() {
     "use strict";
     intervalId = setInterval(draw, 10);
-    //draw();
 }
 
+//draws the play button
 function drawPlay() {
     "use strict";
     ctx.fillStyle = "#FF0000";
     rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
-}
-//Play Button
-function letsPlay() {
-    "use strict";
-    alert("works");
-
 }
 
 function eventWindowLoaded() {
@@ -321,31 +313,25 @@ function eventWindowLoaded() {
     initbricks();
     draw();
     drawPlay();
+
+    canvas.addEventListener('click', function(e) {
+
+        var x = e.offsetX,
+            y = e.offsetY;
+
+        console.log(x, y);
+
+        if (x > WIDTH / 2 - 100 && x <= WIDTH / 2 - 100 + 200 && y > HEIGHT / 2 && y < HEIGHT / 2 + 100) {
+            console.log("in ze box");
+            allofthem();
+        }
+
+        ctx.fillStyle = "#FF3";
+        rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
+    });
 }
 
 window.addEventListener("load", eventWindowLoaded, false);
 
-//window.onload = init;
-//window.addEventListener("load", init, false);
-//window.addEventListener('DOMContentLoaded', init, false);
-//console.log(HEIGHT);
-//window.addEventListener("load", initbricks, false);
-//window.addEventListener("load", draw, false);
-////window.addEventListener("load", drawPlay, false);
-//canvas.addEventListener("click", allofthem, false);
-//
-////window.addEventListener("load", letsPlay, false);
-////canvas.addEventListener('click', function (e) {
-////    "use strict";
-////    //    var x = e.offsetX,
-////    //        y = e.offsetY;
-////
-////    ctx.fillStyle = "#FF3";
-////    rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
-////    alert("Fuck yeagg");
-////
-////});
-////allofthem();
-////letsPlay();
-//document.onkeydown = onKeyDown;
-//document.onkeyup = onKeyUp;
+document.onkeydown = onKeyDown;
+document.onkeyup = onKeyUp;
