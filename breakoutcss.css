@@ -4,44 +4,36 @@
 }
 
 body {
-	background-color: black;
-/*
+    background-color: black;
+    /*
     font-family: 'atarifull', sans-serif;
     letter-spacing: .2em;
 */
-/*    font-size: 1.2em;*/
-}
-#myCanvas {
-	border: solid #6FC3DF;
-	border-width: thick;
-	margin: 1em auto 1em auto;
-	display: block;
-}
-header {
-	background-color: #0C141F;
-	border: solid #6FC3DF;
-	font-weight: 800;
-	border-width: thick;
-	text-align: center;
-	font-size: 25px;
-	width: 700px;
-	margin: 1.5em auto 0 auto;
-	color: #6FC3DF;
-	padding: 0;
-}
-footer {
-	font-size: 17px;
-	font-weight: 400;
-	padding: 10px 0 10px 0;
-	width: 700px;
-	margin: 1.5em auto 0 auto;
-	background-color: #0C141F;
-	border: solid #6FC3DF;
-	border-width: thick;
-	text-align: center;
-	color: #6FC3DF;
+    /*    font-size: 1.2em;*/
 }
 
-#myCanvas, header, footer {
-	width: 900px;
+#myCanvas {
+    border: solid #6FC3DF;
+    border-width: thick;
+    margin: 1em auto 1em auto;
+    display: block;
+}
+
+header {
+    background-color: #0C141F;
+    border: solid #6FC3DF;
+    font-weight: 800;
+    border-width: thick;
+    text-align: center;
+    font-size: 2em;
+    width: 700px;
+    margin: 1em auto 0 auto;
+    color: #6FC3DF;
+    padding: .2em 0;
+}
+
+#myCanvas,
+header,
+footer {
+    width: 900px;
 }

@@ -300,11 +300,9 @@ function allofthem() {
     intervalId = setInterval(draw, 10);
 }
 
-//draws the play button
+//draws the play button and instructions 
 function drawPlay() {
     "use strict";
-    //ctx.fillStyle = "#FF0000";
-    //rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
 
     ctx.strokeStyle = "#6FC3DF";
     ctx.lineWidth = "5";
@@ -314,6 +312,14 @@ function drawPlay() {
     ctx.fillStyle = "white";
     ctx.font = "35pt sans-serif";
     ctx.fillText("PLAY", WIDTH / 2 - 61, HEIGHT / 2 + 53);
+
+
+    ctx.fillStyle = "white";
+    ctx.font = "20pt sans-serif";
+    ctx.fillText("Use arrow keys to move the paddle left and right.", WIDTH / 2 - 275, HEIGHT / 2 + 130);
+    ctx.fillText("You have 3 lives to beat two levels.", WIDTH / 2 - 210, HEIGHT / 2 + 170);
+    console.log(WIDTH);
+
 }
 
 function eventWindowLoaded() {
@@ -331,17 +337,13 @@ function eventWindowLoaded() {
         // checks if click is within the rectangle
         if (x > WIDTH / 2 - 100 && x <= WIDTH / 2 - 77 + 150 && y > HEIGHT / 2 && y < HEIGHT / 2 + 75) {
             console.log("in ze box");
-            alert("in the box");
-            //allofthem();
+            //alert("in the box");
+            allofthem();
         }
-
-//        ctx.fillStyle = "#FF3";
-//        rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
 
     });
 }
 
 window.addEventListener("load", eventWindowLoaded, false);
-
 document.onkeydown = onKeyDown;
 document.onkeyup = onKeyUp;
