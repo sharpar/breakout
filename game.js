@@ -303,8 +303,17 @@ function allofthem() {
 //draws the play button
 function drawPlay() {
     "use strict";
-    ctx.fillStyle = "#FF0000";
-    rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
+    //ctx.fillStyle = "#FF0000";
+    //rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
+
+    ctx.strokeStyle = "#6FC3DF";
+    ctx.lineWidth = "5";
+    ctx.strokeRect(WIDTH / 2 - 77, HEIGHT / 2, 150, 75);
+
+    //text - "PLAY"
+    ctx.fillStyle = "white";
+    ctx.font = "35pt sans-serif";
+    ctx.fillText("PLAY", WIDTH / 2 - 61, HEIGHT / 2 + 53);
 }
 
 function eventWindowLoaded() {
@@ -314,20 +323,21 @@ function eventWindowLoaded() {
     draw();
     drawPlay();
 
-    canvas.addEventListener('click', function(e) {
-
+    canvas.addEventListener('click', function (e) {
+        //coordinates of click
         var x = e.offsetX,
             y = e.offsetY;
 
-        console.log(x, y);
-
-        if (x > WIDTH / 2 - 100 && x <= WIDTH / 2 - 100 + 200 && y > HEIGHT / 2 && y < HEIGHT / 2 + 100) {
+        // checks if click is within the rectangle
+        if (x > WIDTH / 2 - 100 && x <= WIDTH / 2 - 77 + 150 && y > HEIGHT / 2 && y < HEIGHT / 2 + 75) {
             console.log("in ze box");
-            allofthem();
+            alert("in the box");
+            //allofthem();
         }
 
-        ctx.fillStyle = "#FF3";
-        rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
+//        ctx.fillStyle = "#FF3";
+//        rect(WIDTH / 2 - 100, HEIGHT / 2, 200, 100);
+
     });
 }
 

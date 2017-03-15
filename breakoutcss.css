@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'atarifull';
+    src: url('atarifull.ttf');
+}
+
 body {
 	background-color: black;
+/*
+    font-family: 'atarifull', sans-serif;
+    letter-spacing: .2em;
+*/
+/*    font-size: 1.2em;*/
 }
 #myCanvas {
 	border: solid #6FC3DF;
