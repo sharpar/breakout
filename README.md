@@ -1,5 +1,6 @@
 breakout
 ========
+### Demo: http://sharpar.github.io/breakout/
 
 Recreation of Atari's Breakout made using HTML, CSS, and JavaScript.
 Created to better understand HTML5's new canvas feature.
